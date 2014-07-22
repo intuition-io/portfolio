@@ -2,6 +2,9 @@ language: python
 python:
   - "2.7"
 
+env:
+  - COVERALLS_REPO_TOKEN=uwZXSYVHQUdUBcUeUXCbzFktqamvuh2TA
+
 install:
   - make
   - pip install --upgrade -r dev-requirements.txt
@@ -13,6 +16,9 @@ before_script:
 script:
   - nosetests tests --with-coverage --cover-package=portfolio --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - coverage xml -o shippable/codecoverage/coverage.xml
+
+after_success:
+  - coveralls
 
 notifications:
   mail:

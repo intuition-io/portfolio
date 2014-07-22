@@ -9,7 +9,7 @@
 import multiprocessing
 import setuptools
 from portfolio import (
-    __version__, __author__, __licence__, __project__
+    __version__, __author__, __licence__, __project__, __teaser__
 )
 
 REQUIREMENTS = [
@@ -18,9 +18,10 @@ REQUIREMENTS = [
 
 
 def long_description():
+    ''' Safely read README.md '''
     try:
-        with open('README.md') as f:
-            return f.read()
+        with open('README.md') as fd:
+            return fd.read()
     except IOError:
         return "failed to read README.md"
 
@@ -28,7 +29,7 @@ def long_description():
 setuptools.setup(
     name=__project__,
     version=__version__,
-    description='Portfolio analytics framework',
+    description=__teaser__,
     author=__author__,
     author_email='xavier.bruhiere@gmail.com',
     packages=setuptools.find_packages(),

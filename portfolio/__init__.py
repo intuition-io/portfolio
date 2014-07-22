@@ -7,8 +7,8 @@
 '''
 
 __project__ = 'portfolio'
-__doc__ = ('Inspired by R package PortfolioAnalytics.'
-           'Extends zipline Portfolio object.')
+__teaser__ = ('Inspired by R package PortfolioAnalytics.'
+              'Extends zipline Portfolio object.')
 __author__ = 'Xavier Bruhiere'
 __copyright__ = 'Xavier Bruhiere'
 __licence__ = 'Apache 2.0'

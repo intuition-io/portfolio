@@ -17,4 +17,5 @@ class PortfolioAnalytics(zipline.protocol.Portfolio):
     '''
     Zipline compatible extension of Portfolio, with analytics superpowers
     '''
-    pass
+    def __init__(self):
+        super(zipline.protocol.Portfolio, self).__init__()
