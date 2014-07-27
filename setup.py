@@ -13,7 +13,9 @@ from portfolio import (
 )
 
 REQUIREMENTS = [
-    'zipline'
+    'numpy',
+    'pandas',
+    'scipy'
 ]
 
 

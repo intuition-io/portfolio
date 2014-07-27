@@ -26,7 +26,7 @@ License
 
 Copyright 2014 Xavier Bruhiere.
 
-**Portfolio** is available under the [Apache License, Version 2.0][5].
+*Portfolio* is available under the [Apache License, Version 2.0][5].
 
 
 [5]: http://www.apache.org/licenses/LICENSE-2.0.html

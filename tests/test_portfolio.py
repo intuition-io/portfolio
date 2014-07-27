@@ -7,14 +7,23 @@
 '''
 
 import unittest
-from nose.tools import eq_
-import portfolio.analytics
+from nose.tools import eq_, nottest
+from portfolio.analytics import PortfolioAnalytics
+
+
+class BasicPortfolio(PortfolioAnalytics):
+    def optimize(signals, *args):
+        return {}
 
 
 class TestPortfolioObject(unittest.TestCase):
 
+    @nottest
+    def id_objective(self, x):
+        return x
+
     def test_has_zipline_attributes(self):
-        pf = portfolio.analytics.PortfolioAnalytics()
+        pf = BasicPortfolio()
         eq_(pf.positions, {})
         eq_(pf.start_date, None)
         for attribute in ['capital_used', 'cash', 'pnl',

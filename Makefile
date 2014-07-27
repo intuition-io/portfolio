@@ -34,7 +34,7 @@ tests: warn_missing_linters
 	# TODO Fail if outdated
 	piprot --outdated requirements.txt dev-requirements.txt
 	@echo -e '\tChecking syntax ...'
-	pep8 --ignore E265 tests portfolio
+	pep8 --exclude _review --ignore E265 tests portfolio
 	@echo -e '\tRunning tests ...'
 	nosetests -s -w tests --with-yanc --with-coverage --cover-package=portfolio
 
