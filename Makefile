@@ -10,7 +10,8 @@ install:
 
 dependencies:
 	@echo "[make] Installing packages"
-	sudo apt-get -y --force-yes install git-core python-pip python-dev g++ make gfortran 2>&1 >> ${LOGS}
+	sudo apt-get update -y
+	sudo apt-get -y --no-install-recommends install libopenblas-dev liblapack-dev gfortran 2>&1 >> ${LOGS}
 	@echo "[make] Installing python modules"
 	pip install --quiet --use-mirrors distribute 2>&1 >> ${LOGS}
 	pip install --quiet --use-mirrors numpy 2>&1 >> ${LOGS}

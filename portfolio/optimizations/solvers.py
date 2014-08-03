@@ -21,6 +21,7 @@ class SolverPortfolio(PortfolioAnalytics):
         super(SolverPortfolio, self).__init__()
 
     # TODO Make the solver pluggable
+    # TODO If no universe provided, try to use *args quotes ?
     @portfolio.utils.preprocess
     def optimize(self, universe, *args):
         L = len(universe)

@@ -3,4 +3,4 @@ nose==1.3.3
 yanc==0.2.4
 coveralls==0.4.2
 piprot==0.6.0
-radon==0.5.2
+radon==0.5.3

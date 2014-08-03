@@ -20,13 +20,20 @@ def neutral_guess(n_variables, factor=1.0):
 
 def preprocess(fct):
     def inner(self, signals, *args):
+        if isinstance(signals, list):
+            # Default is a list of interesting stocks to buy
+            signals = {'buy': signals}
+        sell_signals = signals.get('sell', [])
+        buy_signals = signals.get('buy', [])
+
         positions = [p for p in self.positions
-                     if (p not in signals['sell'])
+                     if (p not in sell_signals)
                      and self.positions[p]['amount'] != 0]
-        universe = [sid for sid in set(signals['buy'].keys()).union(positions)]
+        universe = [sid for sid in set(buy_signals).union(positions)]
+
         # Close every positoins on 'sell' signal
         allocation = {
-            sid: 0.0 for sid in signals['sell'] if sid in self.positions
+            sid: 0.0 for sid in sell_signals if sid in self.positions
         }
         if universe and len(signals['buy']) > 0:
             allocation.update(fct(self, universe, *args))
