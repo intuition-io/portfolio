@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 
-'''
-  :copyright (c) 2014 Xavier Bruhiere.
-  :license: Apache 2.0, see LICENSE for more details.
-'''
-
 import abc
 import portfolio.zipline
 
@@ -13,9 +8,9 @@ NO_BOUND = None
 
 
 class PortfolioAnalytics(portfolio.zipline.FactoryPortfolio):
-    '''
-    Zipline compatible extension of Portfolio, with analytics superpowers
-    '''
+    """Zipline compatible extension of Portfolio, with analytics superpowers.
+
+    """
 
     __metaclass__ = abc.ABCMeta
 

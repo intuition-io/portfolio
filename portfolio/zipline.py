@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
-
 '''
   :copyright (c) 2014 Quantopian, Inc.
   :license: Apache 2.0, see LICENSE for more details.
@@ -8,7 +7,6 @@
 
 
 class Position(object):
-
     def __init__(self, sid):
         self.sid = sid
         self.amount = 0
@@ -23,7 +21,6 @@ class Position(object):
 
 
 class Positions(dict):
-
     def __missing__(self, key):
         pos = Position(key)
         self[key] = pos
@@ -31,7 +28,6 @@ class Positions(dict):
 
 
 class FactoryPortfolio(object):
-
     def __init__(self):
         self.capital_used = 0.0
         self.starting_cash = 0.0

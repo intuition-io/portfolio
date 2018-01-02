@@ -1,18 +1,12 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 
-'''
-  :copyright (c) 2014 Xavier Bruhiere.
-  :license: Apache 2.0, see LICENSE for more details.
-'''
-
 from scipy import optimize
 import portfolio.utils
 from portfolio.analytics import PortfolioAnalytics
 
 
 class SolverPortfolio(PortfolioAnalytics):
-
     def __init__(self, objective_func, solver='SLSQP'):
         self._objective = objective_func
         self._solver = solver
@@ -33,11 +27,13 @@ class SolverPortfolio(PortfolioAnalytics):
             'method': self._solver,
             'constraints': self._constraints,
             'bounds': self._box_constraint(L),
-            'options': {'disp': False, 'maxiter': 30}
+            'options': {
+                'disp': False,
+                'maxiter': 30
+            }
         }
         result = self._optimizer(**kwargs)
-        print('Done: {} ({} iterations)'.format(
-            result.message, result.nit))
+        print('Done: {} ({} iterations)'.format(result.message, result.nit))
 
         if result.success:
             allocation = {
