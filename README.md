@@ -5,7 +5,7 @@ Portfolio Analytics
 [![Coverage Status](https://img.shields.io/coveralls/intuition-io/portfolio.svg)](https://coveralls.io/r/intuition-io/portfolio)
 [![Code Health](https://landscape.io/github/intuition-io/portfolio/master/landscape.png)](https://landscape.io/github/intuition-io/portfolio/master)
 [![Requirements Status](https://requires.io/github/intuition-io/portfolio/requirements.png?branch=master)](https://requires.io/github/intuition-io/portfolio/requirements/?branch=master)
-[![License](https://pypip.in/license/intuition/badge.png)](https://pypi.python.org/pypi/intuition/)
+[![License](https://img.shields.io/pypi/l/intuition.svg)](https://pypi.python.org/pypi/intuition/)
 [![Gitter chat](https://badges.gitter.im/intuition-io.png)](https://gitter.im/intuition-io)
 
 > [Zipline][1] compatible extension of Portfolio, with analytics superpowers.
