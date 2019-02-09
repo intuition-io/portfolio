@@ -75,6 +75,11 @@ Out[66]:
 ```
 
 
+### Additional resources
+
+- [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) - _Financial portfolio optimisation in python, including classical efficient frontier and experimental methods._
+
+
 [1]: https://github.com/quantopian/zipline
 [2]: http://intuition.io
 [3]: http://doc.intuition.io
